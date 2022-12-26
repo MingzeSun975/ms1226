@@ -168,7 +168,7 @@ class Login extends Component {
                     	Log in
                     </div>
 					<p className="text-lg text-gray-500">
-					Login to your account(test1)
+					Login to your account(test2)
 					</p>
 					<div className="flex flex-col flex-1">
 						<label className="text-gray-400 text-sm block mt-4 inline-block text-left">Email Address</label>
