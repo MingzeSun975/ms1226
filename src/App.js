@@ -28,19 +28,25 @@ import LoginSuccess from './Login/Success'
 
 
 import './App.scss'
+import awsExports from "./aws-exports";
+import { Amplify, API, graphqlOperation } from 'aws-amplify'
+import { withAuthenticator, Button, Heading, AmplifySignOut } from '@aws-amplify/ui-react';
+Amplify.configure(awsExports);
+
 
 if(!window.store){
   window.store = new AppStore();
 }
 
-
 @observer
 class App extends Component {
   render() {
     return (
-    <ThemeProvider theme={colors}>
-        <Provider store={window.store}>
-          <Router>
+ 
+       
+    <ThemeProvider theme={colors}>       
+      <Provider store={window.store}>
+      <Router>
            {window.store.redirect ? <Redirect to={window.store.redirect} /> : null }
             {window.store.isLoggedIn ? <>
             {window.store.profile.status ? <>  {/*  Logged in with plan */}
@@ -80,10 +86,12 @@ class App extends Component {
                 </Switch>
             </>}
            </Router>
-        </Provider>
-      </ThemeProvider>
+           
+          
+      </Provider>
+    </ThemeProvider> 
     )
   }
 }
 
-export default App
+export default withAuthenticator(App)

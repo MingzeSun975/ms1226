@@ -1,0 +1,58 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-ms1226-dev-120853-authRole",
+      "UnauthRoleArn": "arn:aws:iam::784915373932:role/amplify-ms1226-dev-120853-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::784915373932:role/amplify-ms1226-dev-120853-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-ms1226-dev-120853-deployment",
+      "UnauthRoleName": "amplify-ms1226-dev-120853-unauthRole",
+      "StackName": "amplify-ms1226-dev-120853",
+      "StackId": "arn:aws:cloudformation:us-east-1:784915373932:stack/amplify-ms1226-dev-120853/fa9906c0-853f-11ed-be4b-0e8a9b07c009",
+      "AmplifyAppId": "d3u7f0mq5kevc"
+    }
+  },
+  "auth": {
+    "ms122680600914": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "output": {
+        "UserPoolId": "us-east-1_dkLxDNVRi",
+        "AppClientIDWeb": "39tsiflom6rdhvmkob0s6tphe1",
+        "AppClientID": "3ainvsghu4hl3fub6vuvbths96",
+        "IdentityPoolId": "us-east-1:703378da-e087-43ba-a05c-39fa504bc539",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:784915373932:userpool/us-east-1_dkLxDNVRi",
+        "IdentityPoolName": "ms122680600914_identitypool_80600914__dev",
+        "UserPoolName": "ms122680600914_userpool_80600914"
+      },
+      "lastPushTimeStamp": "2022-12-26T21:06:00.043Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-ms1226-dev-120853-deployment/amplify-cfn-templates/auth/ms122680600914-cloudformation-template.json",
+        "logicalId": "authms122680600914"
+      },
+      "lastPushDirHash": "T/WNJXLkkMfsFcmmuNY/rVBYKL4="
+    }
+  }
+}
