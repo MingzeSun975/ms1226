@@ -3,7 +3,7 @@ import { observable, computed, makeObservable } from 'mobx'
 import { configure } from "mobx"
 import FuzzySet from 'fuzzyset'
 import Filter from 'bad-words'
-
+import { Provider } from 'mobx-react'
 import TOOLS from './tools'
 import config from './config'
 
@@ -28,7 +28,7 @@ class appStore {
 
 	// User Profile
 	@observable profile = {}
-	@observable isLoggedIn = false
+	@observable isLoggedIn = true
 	@observable loginLoading = false
 	
 	@observable landingPageUrl = config.landingPageUrl

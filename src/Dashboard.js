@@ -3,18 +3,24 @@ import { Link } from 'react-router-dom'
 import { computed,  } from 'mobx'
 import MainBody from './Components/Body'
 import {Helmet} from "react-helmet";
-
-
+import { Provider  } from 'mobx-react'
+import { withAuthenticator, Button, Heading, AmplifySignOut } from '@aws-amplify/ui-react';
 import { observer, inject } from 'mobx-react'
 @inject('store')
 @observer
 class Body extends Component {
 
+	// @computed get permissions() {
+	// 	return this.props.store.tools.filter(tool=>
+	// 		tool.permissions.some(r=> this.props.store.profile.permissions.includes(r))
+	// 	)
+	// }
 	@computed get permissions() {
-		return this.props.store.tools.filter(tool=>
-			tool.permissions.some(r=> this.props.store.profile.permissions.includes(r))
+		// if (!this.props.store) return ['none'] 
+		return this.props.store.tools.filter(tool =>
+		  tool.permissions.some(r => this.props.store.profile.permissions.includes(r))
 		)
-	}
+	  }
 
 	@computed get beta() {
 		return this.permissions.filter(tool => tool.category === 'Beta')
@@ -48,8 +54,15 @@ class Body extends Component {
 			<Helmet>
 				<title>{`Tools - OpenAI Template`}</title>
 			</Helmet>
+			<header className="App-header">
+            <AmplifySignOut />
+               <h2>My App Content</h2>
+            </header>
 			<MainBody className="px-4 py-4 md:px-28 md:py-8 lg:py-12 ">
-
+			   <h2>PROGRAMMING</h2>
+			   <button >
+                  Hello World
+               </button>
 		
 
 			{this.programming.length ? <>
@@ -104,7 +117,7 @@ class Body extends Component {
 						/>)} 
 				</Grid>
 				<Divider />
-			</> : null}
+			</> : null} 
 
 			{this.personal.length ? <>
 				<Title title="Personal" />
@@ -140,7 +153,7 @@ class Body extends Component {
 						/>)} 
 				</Grid>
 				<Divider />
-			</> : null}
+			</> : null} 
 
 </MainBody>
 </>)
