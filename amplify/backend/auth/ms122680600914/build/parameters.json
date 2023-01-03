@@ -1,0 +1,59 @@
+{
+  "identityPoolName": "ms122680600914_identitypool_80600914",
+  "allowUnauthenticatedIdentities": false,
+  "resourceNameTruncated": "ms122680600914",
+  "userPoolName": "ms122680600914_userpool_80600914",
+  "autoVerifiedAttributes": [
+    "email"
+  ],
+  "mfaConfiguration": "OFF",
+  "mfaTypes": [
+    "SMS Text Message"
+  ],
+  "smsAuthenticationMessage": "Your authentication code is {####}",
+  "smsVerificationMessage": "Your verification code is {####}",
+  "emailVerificationSubject": "Your verification code",
+  "emailVerificationMessage": "Your verification code is {####}",
+  "defaultPasswordPolicy": false,
+  "passwordPolicyMinLength": 8,
+  "passwordPolicyCharacters": [],
+  "requiredAttributes": [
+    "email"
+  ],
+  "aliasAttributes": [],
+  "userpoolClientGenerateSecret": false,
+  "userpoolClientRefreshTokenValidity": 30,
+  "userpoolClientWriteAttributes": [
+    "email"
+  ],
+  "userpoolClientReadAttributes": [
+    "email"
+  ],
+  "userpoolClientLambdaRole": "ms122680600914_userpoolclient_lambda_role",
+  "userpoolClientSetAttributes": false,
+  "sharedId": "80600914",
+  "resourceName": "ms122680600914",
+  "authSelections": "identityPoolAndUserPool",
+  "useDefault": "default",
+  "usernameAttributes": [
+    "email"
+  ],
+  "userPoolGroupList": [],
+  "serviceName": "Cognito",
+  "usernameCaseSensitive": false,
+  "useEnabledMfas": true,
+  "authRoleArn": {
+    "Fn::GetAtt": [
+      "AuthRole",
+      "Arn"
+    ]
+  },
+  "unauthRoleArn": {
+    "Fn::GetAtt": [
+      "UnauthRole",
+      "Arn"
+    ]
+  },
+  "breakCircularDependency": true,
+  "dependsOn": []
+}
