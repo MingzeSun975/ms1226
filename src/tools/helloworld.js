@@ -1,7 +1,7 @@
 import {
 	ViewListIcon,
 } from '@heroicons/react/solid'
-
+import { withAuthenticator, Button, Heading, AmplifySignOut } from '@aws-amplify/ui-react';
 
 const obj = {
 
