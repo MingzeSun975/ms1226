@@ -44,7 +44,8 @@ class App extends Component {
     return (
  
        
-    <ThemeProvider theme={colors}>  
+    <ThemeProvider theme={colors}>
+      <AmplifySignOut />
       <h2>Welcome</h2>
       <Provider store={window.store}>
       <Router>
