@@ -44,7 +44,8 @@ class App extends Component {
     return (
  
        
-    <ThemeProvider theme={colors}>       
+    <ThemeProvider theme={colors}>  
+      <h2>Welcome</h2>
       <Provider store={window.store}>
       <Router>
            {window.store.redirect ? <Redirect to={window.store.redirect} /> : null }
